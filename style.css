@@ -267,10 +267,15 @@ body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  justify-content: flex-start;
+  align-items: flex-start;
   text-align: left;
-  padding: 0;
+
+  /* spacing fixes */
+  padding-top: 140px; /* keeps content below navbar */
+  padding-left: 20px;
+  padding-right: 20px;
+
   max-width: var(--max-width);
   margin: 0 auto;
   z-index: 10;
@@ -278,15 +283,16 @@ body {
 
 .hero-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
-  margin-bottom: 15px;
+  margin-bottom: 20px; /* slightly larger gap */
   letter-spacing: 3px;
   font-weight: 800;
 }
 
 .hero-subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   max-width: 650px;
+  line-height: 1.6; /* more readable */
   color: var(--secondary-color);
 }
 
@@ -296,6 +302,12 @@ body {
 }
 
 /* CTA */
+.hero-buttons {
+  display: flex;
+  gap: 20px; /* spacing between buttons */
+  margin-top: 10px;
+}
+
 .cta-button {
   background: transparent;
   border: 2px solid var(--accent-color);
