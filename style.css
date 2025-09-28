@@ -11,7 +11,7 @@
   --max-width: 1200px;
 
   /* Nav drawer sizing */
-  --nav-drawer-width: 320px;
+  --nav-drawer-width: 100%;
   --navbar-padding: 10px 40px;
 }
 
@@ -58,7 +58,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(3, 7, 14, 0.2); /* overlay */
+  background: rgba(3, 7, 14, 0.97); /* overlay */
 }
 
 /* ================================
@@ -82,7 +82,7 @@ body {
   opacity: 0;
   transition: transform var(--transition-speed) ease,
     opacity var(--transition-speed) ease;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 .navbar img {
@@ -97,7 +97,7 @@ body {
 }
 
 .nav-brand a {
-  font-size: 1.35rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-decoration: none;
@@ -176,8 +176,9 @@ body {
   position: fixed;
   top: 0;
   right: 0;
+  left: 0;
   height: 100vh;
-  width: min(var(--nav-drawer-width), 85vw);
+  width: min(var(--nav-drawer-width), 100vw);
   max-width: 420px;
   padding: 84px 28px;
   gap: 22px;
@@ -277,20 +278,19 @@ body {
   padding-right: 20px;
 
   max-width: var(--max-width);
-  margin: 0 auto;
   z-index: 10;
 }
 
 .hero-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
-  margin-bottom: 20px; /* slightly larger gap */
   letter-spacing: 3px;
   font-weight: 800;
+  color: var(--text-color);
 }
 
 .hero-subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   max-width: 650px;
   line-height: 1.6; /* more readable */
   color: var(--secondary-color);
@@ -317,7 +317,6 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
-  border-radius: 6px;
   transition: background 0.3s, color 0.3s, transform 0.2s ease;
 }
 
