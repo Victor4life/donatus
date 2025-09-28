@@ -58,7 +58,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(3, 7, 14, 0.95); /* overlay */
+  background: rgba(3, 7, 14, 0.2); /* overlay */
 }
 
 /* ================================
