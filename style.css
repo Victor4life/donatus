@@ -327,41 +327,43 @@ body {
 }
 
 /* ================================
-     Responsive tweaks
-  ================================= */
+   Mobile Nav Drawer (top-down instead of side)
+================================= */
 @media (max-width: 900px) {
-  .navbar {
-    padding: 14px 22px;
-  }
-
-  .nav-brand a {
-    font-size: 1.15rem;
-  }
-
-  .hamburger {
-    width: 50px;
-    height: 30px;
-    padding: 10px;
-  }
-
   .nav-links {
-    width: 78vw;
-    padding: 88px 18px;
+    top: 70px; /* below navbar */
+    left: 50%;
+    transform: translate(-50%, -120%); /* hide above screen */
+    width: 90%; /* don’t touch edges */
+    max-width: 400px;
+    height: auto; /* let content define height */
+    padding: 28px 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+
+    background: linear-gradient(
+      180deg,
+      rgba(3, 7, 14, 0.98),
+      rgba(3, 7, 14, 0.96)
+    );
+    transition: transform 0.36s cubic-bezier(0.22, 0.9, 0.2, 1),
+      opacity 0.3s ease;
+  }
+
+  .nav-links.active {
+    transform: translate(-50%, 0); /* drops down */
+  }
+
+  /* Stack items top-down cleanly */
+  .nav-links li {
+    width: 100%;
+    margin: 10px 0;
   }
 
   .nav-links a {
-    font-size: 1.05rem;
-    padding: 12px 14px;
-  }
-}
-
-@media (max-width: 420px) {
-  .nav-links {
-    width: 92vw;
-    padding: 84px 14px;
-  }
-
-  .hero-title {
-    font-size: 2.2rem;
+    display: block;
+    padding: 12px;
+    text-align: center;
+    font-size: 1.1rem;
   }
 }
