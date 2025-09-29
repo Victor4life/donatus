@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donatus Emeka | Frontend Developer</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Animate on Scroll library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Background -->
@@ -18,7 +20,7 @@
           <a href="#">Works</a>
         </div>
 
-        <!-- Hamburger (always visible) -->
+        <!-- Hamburger -->
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -26,18 +28,109 @@
 
         <!-- Nav Links -->
         <ul class="nav-links" id="navLinks">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/work.html">Work</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#" class="active">Work</a></li>
           <li><a href="mailto:emekav233@gmail.com">Contact</a></li>
         </ul>
       </nav>
     </section>
-    <section class="hero" id="works">
-      <p>Featured Works</p>
+
+    <!-- Works Section -->
+    <section class="works-section">
+      <h2>Featured Works</h2>
+
+      <div class="work-item" data-aos="fade-right">
+        <div class="work-image">
+          <img src="images/eluminary.jpeg" alt="Project 1" />
+        </div>
+        <div class="work-text">
+          <h3>Eluminary Blog</h3>
+          <p>
+            Short description of the project goes here. Explain what tools were
+            used and what you built.
+          </p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <div class="work-item" data-aos="fade-left">
+        <div class="work-image">
+          <img src="images/healthblog.png" alt="Project 2" />
+        </div>
+        <div class="work-text">
+          <h3>Health Blog</h3>
+          <p>
+            Another short description goes here. Keep it clean and professional
+            to showcase your skills.
+          </p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+      <div class="work-item" data-aos="fade-right">
+        <div class="work-image">
+          <img src="images/project1.jpg" alt="Project 1" />
+        </div>
+        <div class="work-text">
+          <h3>Go-Fix</h3>
+          <p>
+            Short description of the project goes here. Explain what tools were
+            used and what you built.
+          </p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <div class="work-item" data-aos="fade-left">
+        <div class="work-image">
+          <img src="images/project2.jpg" alt="Project 2" />
+        </div>
+        <div class="work-text">
+          <h3>Project Title Two</h3>
+          <p>
+            Another short description goes here. Keep it clean and professional
+            to showcase your skills.
+          </p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+      <div class="work-item" data-aos="fade-right">
+        <div class="work-image">
+          <img src="images/project1.jpg" alt="Project 1" />
+        </div>
+        <div class="work-text">
+          <h3>Project Title One</h3>
+          <p>
+            Short description of the project goes here. Explain what tools were
+            used and what you built.
+          </p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <div class="work-item" data-aos="fade-left">
+        <div class="work-image">
+          <img src="images/project2.jpg" alt="Project 2" />
+        </div>
+        <div class="work-text">
+          <h3>Project Title Two</h3>
+          <p>
+            Another short description goes here. Keep it clean and professional
+            to showcase your skills.
+          </p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
     </section>
 
     <!-- Scripts -->
     <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
   </body>
 </html>

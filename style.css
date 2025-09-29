@@ -405,3 +405,118 @@ body {
     font-size: 1.1rem;
   }
 }
+
+/* ================================
+ABOUT PAGE
+================================= */
+#about {
+  padding: 6rem 2rem;
+  text-align: left;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.tech-stack li {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: #ffffff;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tech-stack li:hover {
+  background: #e29d07;
+  color: #03070e;
+  transform: translateY(-3px);
+}
+
+/* ================================
+WORKS PAGE
+================================= */
+.works-section {
+  max-width: 1100px;
+  margin: 5rem auto;
+  padding: 0 20px;
+}
+
+.works-section h2 {
+  text-align: left;
+  margin-bottom: 3rem;
+  font-size: 1.3rem;
+  color: var(--text-color, #fff);
+}
+
+.work-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.work-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.work-image {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.work-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.work-image:hover img {
+  transform: scale(1.1);
+}
+
+.work-text {
+  flex: 1;
+  color: var(--text-color, #fff);
+}
+
+.work-text h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.work-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: var(--accent-color, #e29d07);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #c98705;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .work-item {
+    flex-direction: column !important;
+  }
+}
